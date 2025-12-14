@@ -1,0 +1,64 @@
+﻿<Window x:Class="AlinaKHApp.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация" 
+        Height="400" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Icon="Resources/Иконка.ico"
+        Background="White"
+        FontFamily="Tw Cen MT">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <Image Source="Resources/Лого.png" Width="24" Height="24" Margin="0,0,10,0"/>
+            <TextBlock Text="Регистрация" 
+                       FontSize="14" FontWeight="Bold" 
+                       Foreground="#37474F" VerticalAlignment="Center"/>
+        </StackPanel>
+
+      
+        <TextBlock Grid.Row="1" Text="Логин:" 
+                   Foreground="#37474F" FontSize="12" Margin="0,0,0,5"/>
+        <TextBox x:Name="LoginTextBox" Grid.Row="1" Margin="0,20,0,5"
+                 Padding="10" FontSize="12"/>
+
+     
+        <TextBlock Grid.Row="2" Text="Пароль:" 
+                   Foreground="#37474F" FontSize="12" Margin="0,0,0,5"/>
+        <PasswordBox x:Name="PasswordBox" Grid.Row="2" Margin="0,20,0,5"
+                     Padding="10" FontSize="12"/>
+
+       
+        <TextBlock Grid.Row="3" Text="Подтвердите пароль:" 
+                   Foreground="#37474F" FontSize="12" Margin="0,0,0,5"/>
+        <PasswordBox x:Name="ConfirmPasswordBox" Grid.Row="4" Margin="0,10,0,27"
+                     Padding="10" FontSize="12" RenderTransformOrigin="0.514,-0.015"/>
+
+     
+        <TextBlock Grid.Row="4" x:Name="StatusText" 
+                   Foreground="#78909C" FontSize="10" HorizontalAlignment="Center"
+                   Margin="0,10,0,10"/>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="RegisterButton" Content="Зарегистрироваться" 
+                    Width="150" Height="30" Margin="0,0,10,0"
+                    Background="#FF9C1A" Foreground="White"
+                    Click="RegisterButton_Click"/>
+            <Button x:Name="CancelButton" Content="Отмена" 
+                    Width="100" Height="30"
+                    Background="#78909C" Foreground="White"
+                    Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
